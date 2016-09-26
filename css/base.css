@@ -1,0 +1,58 @@
+.default_btn {
+	line-height: 37px;
+	color: #f2e9e9;
+	background-color: #768d87;
+	font-size: 17px;
+	font-weight: bold;
+	font-family: »ªÎÄÏ¸ºÚ;
+	background: -webkit-gradient(linear, left top, left bottom, color-start(0.05,
+		#4ed4b1), color-stop(1, #224e94));
+	background: -moz-linear-gradient(top, #4ed4b1 5%, #224e94 100%);
+	background: -o-linear-gradient(top, #4ed4b1 5%, #224e94 100%);
+	background: -ms-linear-gradient(top, #4ed4b1 5%, #224e94 100%);
+	background: linear-gradient(to bottom, #4ed4b1 5%, #224e94 100%);
+	background: -webkit-linear-gradient(top, #4ed4b1 5%, #224e94 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ed4b1',
+		endColorstr='#224e94', GradientType=0);
+	border: 2px solid #f6e4e4;
+	-webkit-border-top-left-radius: 22px;
+	-moz-border-radius-topleft: 22px;
+	border-top-left-radius: 22px;
+	-webkit-border-top-right-radius: 22px;
+	-moz-border-radius-topright: 22px;
+	border-top-right-radius: 22px;
+	-webkit-border-bottom-left-radius: 22px;
+	-moz-border-radius-bottomleft: 22px;
+	border-bottom-left-radius: 22px;
+	-webkit-border-bottom-right-radius: 22px;
+	-moz-border-radius-bottomright: 22px;
+	border-bottom-right-radius: 22px;
+	-moz-box-shadow: inset -2px -3px 20px -4px #91b8b3;
+	-webkit-box-shadow: inset -2px -3px 20px -4px #91b8b3;
+	box-shadow: inset -2px -3px 20px -4px #91b8b3;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.default_btn:hover {
+	background-color: #6c7c7c;
+	background: -webkit-gradient(linear, left top, left bottom, color-start(0.05,
+		#224e94), color-stop(1, #4ed4b1));
+	background: -moz-linear-gradient(top, #224e94 5%, #4ed4b1 100%);
+	background: -o-linear-gradient(top, #224e94 5%, #4ed4b1 100%);
+	background: -ms-linear-gradient(top, #224e94 5%, #4ed4b1 100%);
+	background: linear-gradient(to bottom, #224e94 5%, #4ed4b1 100%);
+	background: -webkit-linear-gradient(top, #224e94 5%, #4ed4b1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#224e94',
+		endColorstr='#4ed4b1', GradientType=0);
+}
+
+.biaoti_default {
+	font-family: Arial, sans-serif;
+	font-size: 24px;
+	color: #f00;
+	font-style:inherit;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #999;
+}

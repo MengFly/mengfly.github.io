@@ -1,30 +1,21 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	
+<title>MengFei Home Zone</title>
+<meta charset="utf-8">
 </head>
-<script>
-function browserRedirect() {
-    var sUserAgent = navigator.userAgent.toLowerCase();
-    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-    var bIsAndroid = sUserAgent.match(/android/i) == "android";
-    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-    if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
-        window.location.href="http://blog.csdn.net/wangpengfei_p";
-    } else {
-        window.location.href="http://m.blog.csdn.net/blog/index?username=wangpengfei_p";
-    }
-}
-browserRedirect();
-</script>
+
+<script type="text/javascript" src="javaScript/main.js"></script>
+<link rel="stylesheet" type="text/css" href="css/base.css">
 <body>
-<h1> 这是我使用github pages搭建的个人站点</h1>
+
+	<h1>这是我使用GitHub pages搭建的个人站点</h1>
+	<div style="width: 100%; background: #678865; padding: 10px">
+		<span class="biaoti_default">我的网址导航: </span> <input
+			class="default_btn" type="button" value="我的个人博客"
+			onclick="browserRedirect()" /> <input class="default_btn"
+			type="button" value="我的GitHub" onclick="browserRedirectToGitHub()" />
+		<!-- <input class="default_btn" type="button" value="进入我的个人博客" onclick="browserRedirect()"/> -->
+	</div>
 </body>
 </html>
