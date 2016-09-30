@@ -8,14 +8,21 @@
 <script type="text/javascript" src="javaScript/main.js"></script>
 <link rel="stylesheet" type="text/css" href="css/base.css">
 <body>
-
-	<h1>这是我使用GitHub pages搭建的个人站点</h1>
-	<div style="width: 100%; background: #678865; padding: 10px">
-		<span class="biaoti_default">我的网址导航: </span> <input
-			class="default_btn" type="button" value="我的个人博客"
-			onclick="browserRedirect()" /> <input class="default_btn"
-			type="button" value="我的GitHub" onclick="browserRedirectToGitHub()" />
-		<!-- <input class="default_btn" type="button" value="进入我的个人博客" onclick="browserRedirect()"/> -->
+	<!-- 包裹层 -->
+	<div id="wrap">
+		<div id="top">
+		<img class="top-title-img" src="image/top_title_img.jpg"/>
+		<span class="top-tip-text">网址导航</span>
+		<ul class="menuul">
+			<li><a href="#">首页</a></li>
+			<li><a href="http:github.com/zuoyandeyingguang">我的GitHub</a></li>
+			<li><a href="http://blog.csdn.net/wangpengfei_p">我的博客</a></li>
+			<li><a href="#">联系我</a></li>
+			<li><a href="#">意见反馈</a></li>
+		</ul>
+		</div>
+		<div id="mainContent"></div>
+		<div id="foot"></div>
 	</div>
-</body>
+ </body>
 </html>

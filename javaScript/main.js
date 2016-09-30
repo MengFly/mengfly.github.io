@@ -18,3 +18,4 @@ function browserRedirect() {
 function browserRedirectToGitHub() {
     window.location.href="http://github.com/zuoyandeyingguang";
 }
+
