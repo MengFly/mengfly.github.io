@@ -1,7 +1,15 @@
 body {
-	margin: 0;
+	margin:0;
 	padding: 0;
+	font-family:Ê•∑‰Ωì;
 	font-size: 16px;
+}
+
+h1 {
+	padding:5px;
+	color:#F00;
+	font-family:Ê•∑‰Ωì;
+	font-size:18px;
 }
 
 #wrap {
@@ -12,20 +20,56 @@ body {
 
 #top {
 	width: 100%;
-	border: 1px solid red;
+	border: 1px solid #009;
 	height: 60px;
 	background: url(../image/top_back.jpg);
 	background-repeat: repeat;
 }
 
 #mainContent {
-	
+	border:1px #999 solid;
 }
 
-#foot {
-	
+.main-left {
+	width:300px;
+	border:1px #999 solid;
+	float:left;
 }
-/*±ÍÃ‚¿∏µƒul∏Ò Ω*/
+
+.main-left-top {
+	height:50%;
+	border:1px #999 solid;
+}
+
+.main-left-top>ol {
+	font-size:12px;
+}
+
+a{
+	color:#00C;
+}
+
+a:hover,a:link,a:active{
+	color:#C36;
+}
+
+
+.main-left-top>ol>li>a, .main-left-bottom>ol>li>a {
+	font-size:12px;
+	display:block;
+	margin-top:2px;
+}
+
+
+
+.main-right {
+	width:900;
+	border:1px #999 solid;
+}
+
+
+
+/*Ê†áÈ¢òËèúÂçïÁöÑÊ†∑Âºè*/
 .menuul {
 	margin-top: 10px;
 	list-style: none;
@@ -60,6 +104,12 @@ body {
 	height: 60px;
 }
 
+.hint-text {
+    text-align:center;
+    color:#999;
+    font-weight: bolder;
+}
+
 .top-tip-text {
 	color:#fff;
 	margin-top:30px;
@@ -71,25 +121,15 @@ body {
 	padding:0 20px;
 }
 
+#foot {
+	border:1px #999 solid;
+	clear:both;
+    width:100%;
+    height: 100px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.foot-copyright {
+	margin-top:80px;
+	line-height:20px;
+	text-align:center;
+}

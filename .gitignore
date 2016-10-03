@@ -1,0 +1,4 @@
+# ignore for eclipes settings
+.settings/
+.project
+.idea/

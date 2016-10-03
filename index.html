@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>MengFei Home Zone</title>
+<title>梦飞的个人主页（MengFly Home Zone）</title>
 <meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta name="keywords" content="个人主页，zuoyandeyingguang，梦飞，网页导航，生活记录，个人随想">
 </head>
 
-<script type="text/javascript" src="javaScript/main.js"></script>
 <link rel="stylesheet" type="text/css" href="css/base.css">
 <body>
 	<!-- 包裹层 -->
@@ -15,14 +16,41 @@
 		<span class="top-tip-text">网址导航</span>
 		<ul class="menuul">
 			<li><a href="#">首页</a></li>
-			<li><a href="http:github.com/zuoyandeyingguang">我的GitHub</a></li>
+			<li><a href="http://github.com/zuoyandeyingguang">我的GitHub</a></li>
 			<li><a href="http://blog.csdn.net/wangpengfei_p">我的博客</a></li>
 			<li><a href="#">联系我</a></li>
 			<li><a href="#">意见反馈</a></li>
 		</ul>
 		</div>
-		<div id="mainContent"></div>
-		<div id="foot"></div>
+		<div id="mainContent">
+        	<div class="main-left">
+           	  <div class="main-left-top">
+                	<h1>我的文章列表</h1>
+                    <hr>
+                	<ol>
+                    	<li><a href="#">第一篇文章</a></li>
+                        <li><a href="#">第二篇文章</a></li>
+                        <li><a href="#">第三篇文章</a></li>
+                        <li><a href="#">第四篇文章</a></li>
+                  </ol>
+                </div>
+                <div class="main-left-bottom">
+                	<h1>我的生活点滴</h1>
+                    <ul>
+                    	<li><a href="#">我的大学</a></li>
+                        <li><a href="#" onClick="checkpass()">实践部</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-right"></div>
+        </div>
+		<div id="foot">
+            <p class="hint-text foot-copyright">Copy Right MengFly</p>
+        </div>
 	</div>
+    <script type="text/javascript" src="js/main.js"></script>
  </body>
 </html>
