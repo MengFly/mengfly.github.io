@@ -1,0 +1,406 @@
+﻿body {
+  margin:0px;
+  background-image:none;
+  position:static;
+  left:auto;
+  width:1144px;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+#u42 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:0px;
+  height:0px;
+}
+#u43_div {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:289px;
+  height:55px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 0);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  font-family:'Arial Negreta', 'Arial Normal', 'Arial';
+  font-weight:700;
+  font-style:normal;
+  font-size:48px;
+}
+#u43 {
+  border-width:0px;
+  position:absolute;
+  left:46px;
+  top:47px;
+  width:289px;
+  height:55px;
+  font-family:'Arial Negreta', 'Arial Normal', 'Arial';
+  font-weight:700;
+  font-style:normal;
+  font-size:48px;
+}
+#u44 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:289px;
+  white-space:nowrap;
+}
+#u45_img {
+  border-width:0px;
+  position:absolute;
+  left:-1px;
+  top:-1px;
+  width:292px;
+  height:6px;
+}
+#u45 {
+  border-width:0px;
+  position:absolute;
+  left:46px;
+  top:128px;
+  width:289px;
+  height:3px;
+}
+#u46 {
+  border-width:0px;
+  position:absolute;
+  left:2px;
+  top:-6px;
+  width:285px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u47 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:0px;
+  height:0px;
+}
+#u48_div {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:45px;
+  height:50px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 0);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  font-family:'Adobe 楷体 Std R Oblique', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
+  font-weight:400;
+  font-style:oblique;
+  font-size:20px;
+}
+#u48 {
+  border-width:0px;
+  position:absolute;
+  left:64px;
+  top:652px;
+  width:45px;
+  height:50px;
+  font-family:'Adobe 楷体 Std R Oblique', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
+  font-weight:400;
+  font-style:oblique;
+  font-size:20px;
+}
+#u48_div.mouseOver {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:45px;
+  height:50px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 0);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  font-family:'Adobe 楷体 Std R Oblique', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
+  font-weight:400;
+  font-style:oblique;
+  font-size:20px;
+}
+#u48.mouseOver {
+}
+#u49 {
+  border-width:0px;
+  position:absolute;
+  left:5px;
+  top:5px;
+  width:35px;
+  white-space:nowrap;
+}
+#u50 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:0px;
+  height:0px;
+}
+#u51_img {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:85px;
+  height:82px;
+}
+#u51 {
+  border-width:0px;
+  position:absolute;
+  left:56px;
+  top:559px;
+  width:75px;
+  height:72px;
+  font-family:'Adobe 楷体 Std R Bold', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
+  font-weight:700;
+  font-style:normal;
+  font-size:36px;
+  color:#FF3399;
+}
+#u52 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:75px;
+  white-space:nowrap;
+}
+#u53_img {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1089px;
+  height:2px;
+}
+#u53 {
+  border-width:0px;
+  position:absolute;
+  left:56px;
+  top:630px;
+  width:1088px;
+  height:1px;
+}
+#u54 {
+  border-width:0px;
+  position:absolute;
+  left:2px;
+  top:-8px;
+  width:1084px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u55 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:0px;
+  height:0px;
+}
+#u56_div {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:61px;
+  height:50px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 0);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  font-family:'Adobe 楷体 Std R Oblique', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
+  font-weight:400;
+  font-style:oblique;
+  font-size:20px;
+}
+#u56 {
+  border-width:0px;
+  position:absolute;
+  left:56px;
+  top:283px;
+  width:61px;
+  height:50px;
+  font-family:'Adobe 楷体 Std R Oblique', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
+  font-weight:400;
+  font-style:oblique;
+  font-size:20px;
+}
+#u56_div.mouseOver {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:61px;
+  height:50px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 0);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  font-family:'Adobe 楷体 Std R Oblique', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
+  font-weight:400;
+  font-style:oblique;
+  font-size:20px;
+}
+#u56.mouseOver {
+}
+#u57 {
+  border-width:0px;
+  position:absolute;
+  left:5px;
+  top:5px;
+  width:51px;
+  white-space:nowrap;
+}
+#u58_div {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:69px;
+  height:50px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 0);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  font-family:'Adobe 楷体 Std R Oblique', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
+  font-weight:400;
+  font-style:oblique;
+  font-size:20px;
+}
+#u58 {
+  border-width:0px;
+  position:absolute;
+  left:184px;
+  top:283px;
+  width:69px;
+  height:50px;
+  font-family:'Adobe 楷体 Std R Oblique', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
+  font-weight:400;
+  font-style:oblique;
+  font-size:20px;
+}
+#u58_div.mouseOver {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:69px;
+  height:50px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 0);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  font-family:'Adobe 楷体 Std R Oblique', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
+  font-weight:400;
+  font-style:oblique;
+  font-size:20px;
+}
+#u58.mouseOver {
+}
+#u59 {
+  border-width:0px;
+  position:absolute;
+  left:5px;
+  top:5px;
+  width:59px;
+  white-space:nowrap;
+}
+#u60 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:0px;
+  height:0px;
+}
+#u61_img {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:85px;
+  height:82px;
+}
+#u61 {
+  border-width:0px;
+  position:absolute;
+  left:56px;
+  top:192px;
+  width:75px;
+  height:72px;
+  font-family:'Adobe 楷体 Std R Bold', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
+  font-weight:700;
+  font-style:normal;
+  font-size:36px;
+  color:#FF3399;
+}
+#u62 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:75px;
+  white-space:nowrap;
+}
+#u63_img {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1089px;
+  height:2px;
+}
+#u63 {
+  border-width:0px;
+  position:absolute;
+  left:56px;
+  top:263px;
+  width:1088px;
+  height:1px;
+}
+#u64 {
+  border-width:0px;
+  position:absolute;
+  left:2px;
+  top:-8px;
+  width:1084px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
