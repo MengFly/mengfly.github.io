@@ -3,7 +3,7 @@
   background-image:none;
   position:static;
   left:auto;
-  width:1144px;
+  width:762px;
   margin-left:0;
   margin-right:0;
   text-align:left;
@@ -43,7 +43,7 @@
   border-width:0px;
   position:absolute;
   left:46px;
-  top:47px;
+  top:35px;
   width:289px;
   height:55px;
   font-family:'Arial Negreta', 'Arial Normal', 'Arial';
@@ -71,9 +71,10 @@
   border-width:0px;
   position:absolute;
   left:46px;
-  top:128px;
+  top:100px;
   width:289px;
   height:3px;
+  font-size:48px;
 }
 #u46 {
   border-width:0px;
@@ -114,8 +115,8 @@
 #u48 {
   border-width:0px;
   position:absolute;
-  left:64px;
-  top:652px;
+  left:57px;
+  top:440px;
   width:45px;
   height:50px;
   font-family:'Adobe 楷体 Std R Oblique', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
@@ -166,15 +167,15 @@
   left:0px;
   top:0px;
   width:85px;
-  height:82px;
+  height:60px;
 }
 #u51 {
   border-width:0px;
   position:absolute;
-  left:56px;
-  top:559px;
+  left:53px;
+  top:379px;
   width:75px;
-  height:72px;
+  height:50px;
   font-family:'Adobe 楷体 Std R Bold', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
   font-weight:700;
   font-style:normal;
@@ -185,7 +186,7 @@
   border-width:0px;
   position:absolute;
   left:0px;
-  top:0px;
+  top:-11px;
   width:75px;
   white-space:nowrap;
 }
@@ -194,15 +195,15 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:1089px;
+  width:710px;
   height:2px;
 }
 #u53 {
   border-width:0px;
   position:absolute;
-  left:56px;
-  top:630px;
-  width:1088px;
+  left:53px;
+  top:427px;
+  width:709px;
   height:1px;
 }
 #u54 {
@@ -210,7 +211,7 @@
   position:absolute;
   left:2px;
   top:-8px;
-  width:1084px;
+  width:705px;
   visibility:hidden;
   word-wrap:break-word;
 }
@@ -244,8 +245,8 @@
 #u56 {
   border-width:0px;
   position:absolute;
-  left:56px;
-  top:283px;
+  left:53px;
+  top:200px;
   width:61px;
   height:50px;
   font-family:'Adobe 楷体 Std R Oblique', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
@@ -304,8 +305,8 @@
 #u58 {
   border-width:0px;
   position:absolute;
-  left:184px;
-  top:283px;
+  left:136px;
+  top:200px;
   width:69px;
   height:50px;
   font-family:'Adobe 楷体 Std R Oblique', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
@@ -356,15 +357,15 @@
   left:0px;
   top:0px;
   width:85px;
-  height:82px;
+  height:58px;
 }
 #u61 {
   border-width:0px;
   position:absolute;
-  left:56px;
-  top:192px;
+  left:53px;
+  top:142px;
   width:75px;
-  height:72px;
+  height:48px;
   font-family:'Adobe 楷体 Std R Bold', 'Adobe 楷体 Std R', 'Adobe 楷体 Std';
   font-weight:700;
   font-style:normal;
@@ -375,7 +376,7 @@
   border-width:0px;
   position:absolute;
   left:0px;
-  top:0px;
+  top:-12px;
   width:75px;
   white-space:nowrap;
 }
@@ -384,15 +385,15 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:1089px;
+  width:710px;
   height:2px;
 }
 #u63 {
   border-width:0px;
   position:absolute;
-  left:56px;
-  top:263px;
-  width:1088px;
+  left:53px;
+  top:188px;
+  width:709px;
   height:1px;
 }
 #u64 {
@@ -400,7 +401,7 @@
   position:absolute;
   left:2px;
   top:-8px;
-  width:1084px;
+  width:705px;
   visibility:hidden;
   word-wrap:break-word;
 }
