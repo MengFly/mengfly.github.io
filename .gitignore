@@ -1,4 +1,1 @@
-# ignore for eclipes settings
-.settings/
-.project
-.idea/
+.sass-cache
