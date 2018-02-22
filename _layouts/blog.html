@@ -97,14 +97,18 @@
       {% assign tags_list = nil %}
     {% endunless %} 
 </p>
+{%assign count = content | strip_html | strip_newlines | remove: " " | size%}
+<blockquote class="post-data">
+  <p>本文字数为 <span style="color: #EB5055"><b>{{ count }}</b></span> 字, 预计读完大约需要 <span style="color:#EB5055"><b>{{ count | divided_by: 350 | plus: 1}}</b></span> 分钟</p>
+</blockquote>
 {{ content }}
 <p class="post-info" >
-  <!-- {%if page.previous != nil %} -->
-  ·上一篇：<a href="{{page.previous.url}}">{{page.previous.title}}</a>
+  {%if page.previous != nil %}
+  ● 上一篇：<a href="{{page.previous.url}}">{{page.previous.title}}</a>
   <br>
   {% endif %}
   {%if page.next != nil%}
-  ·下一篇：<a href="{{page.next.url}}">{{page.next.title}}</a>
+  ● 下一篇：<a href="{{page.next.url}}">{{page.next.title}}</a>
   {%endif%}
 </p>
 		<p class="post-info">
