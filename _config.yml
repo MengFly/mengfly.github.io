@@ -1,15 +1,16 @@
 # ----------- CONFIGURABLE START -----------
 title:            "MengFly Blog Home"
+email:            "www.wangpengfei99@gmail.com"
 description:      "漫画，代码DAIYISIKI"
 url:              https://mengfly.github.io # 域名
+baseurl:           ""
 signoff:          "WangPengFei" # Your name
-facebook_appid:   #liberxue
-google_analytics: UA-101222464-1
 share:            true 
+
 # 分页
 paginate: 15
-paginate_path: "liberxuepage:num"
-gems: [jekyll-paginate]
+paginate_path: "page:num"
+plugins: [jekyll-paginate]
 links:
   - name:         首页
     url:          /
