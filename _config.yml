@@ -10,7 +10,7 @@ share:            true
 # 分页
 paginate: 15
 paginate_path: "page:num"
-plugins: [jekyll-paginate]
+gems: [jekyll-paginate]
 links:
   - name:         首页
     url:          /
