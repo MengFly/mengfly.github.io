@@ -3,7 +3,6 @@ title:            "MengFly Blog Home"
 email:            "www.wangpengfei99@gmail.com"
 description:      "漫画，代码DAIYISIKI"
 url:              "https://mengfly.github.io" # 域名
-baseurl:           ""
 signoff:          "WangPengFei" # Your name
 share:            true 
 
