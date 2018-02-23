@@ -41,10 +41,10 @@
     <h1 class="post-title" itemprop="name headline">
 	{{ page.title }}</h1>
 		 <div class="post-data">  
-	 <time datetime="{{ page.date | date: '%F %H:%M:%S'}}" itemprop="datePublished">发布时间：{{ page.date | date: "%F %H:%M:%S"}}</time>
+	 <time datetime="{{ page.date | date: '%F %H:%M:%S'}}" itemprop="datePublished">发布时间：{{ page.date | date: "%F"}}</time>
      <a href="/tags#{{ page.category }}" title="访问 {{ page.category }}" data-hover="博客分类: {{ page.category }}">博客分类: {{ page.category }}</a>
     <a href="#read"> 阅读次数: comments</a> 
-			</div>
+			</div> 
             <div class="post-tags">
                 {% unless page.tags == empty %}
       {% assign tags_list = page.tags %}
@@ -102,15 +102,16 @@
   <p>本文字数为 <span style="color: #EB5055"><b>{{ count }}</b></span> 字, 预计读完大约需要 <span style="color:#EB5055"><b>{{ count | divided_by: 350 | plus: 1}}</b></span> 分钟</p>
 </blockquote>
 {{ content }}
-<p class="post-info" >
+<!-- 显示上一篇和下一篇的逻辑 -->
+<div class="meta-item meta-comments">
   {%if page.previous != nil %}
-  ● 上一篇：<a href="{{page.previous.url}}">{{page.previous.title}}</a>
-  <br>
+    <li> 上一篇：<a href="{{page.previous.url}}" title="访问{{page.previous.title}}" data-hover="{{page.previous.title}}">{{page.previous.title}}</a></li>
   {% endif %}
   {%if page.next != nil%}
-  ● 下一篇：<a href="{{page.next.url}}">{{page.next.title}}</a>
+  <li> 上一篇：<a href="{{page.next.url}}" title="访问{{page.next.title}}" data-hover="{{page.next.title}}">{{page.next.title}}</a></li>
   {%endif%}
-</p>
+</div>
+
 		<p class="post-info">
 			本文由 <a href="/">MengFly</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为:{{ page.date | date: "%F %H:%M:%S"}}</p>
 	</div>

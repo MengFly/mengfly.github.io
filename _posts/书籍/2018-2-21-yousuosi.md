@@ -1,6 +1,7 @@
 ---
 layout: blog
 book: true
+istop: true
 title: "论余冠英评论《上邪》与《有所思》“合之则双美"
 background-image: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1519221404457&di=9f7e6f6cb6863d6676ca78c2786acaa2&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D201124879%2C697247867%26fm%3D214%26gp%3D0.jpg
 date: 2018-02-21

@@ -2,9 +2,15 @@
 	<div class="footer-social">
 		<div class="footer-container clearfix">
 			<div class="social-list">
-	<!--这里设置网页底部的链接，比如访问我的github....-->
+	
+  {%if page.title%}
+  <!-- nothing -->
+  {%else%}
+  <p>总计文章：{{paginator.total_posts}}篇</p>
+  {%endif%}
+  <!--这里设置网页底部的链接，比如访问我的github....-->
     <a class="social github" target="blank" href="https://github.com/mengfly" title="访问我的Github" data-hover="GitHub">GitHub</a>
-     <a class="social rss" target="blank" href="/feed.xml"title="访问 LiberXue_RSS" data-hover="RSS">获取RSS</a>
+     <a class="social rss" target="blank" href="/feed.xml" title="获取{{site.title}} RSS" data-hover="获取RSS">获取RSS</a>
 	</div>
 		</div>
 	</div>
@@ -14,31 +20,36 @@
             <div class="meta-item meta-copyright">
                 <div class="meta-copyright-info">
                     <a href="/" class="info-logo">
-                         <img src="{{ site.url }}/style/images/logo-liberxue.png"   title="访问 LiberXue_blog" data-hover="LiberXue_blog" alt="LiberXue_blog" /> </a>
+                         <img src="http://www.liberxue.com/style/images/logo-liberxue.png"   title="访问 LiberXue_blog" data-hover="LiberXue_blog" alt="LiberXue_blog" /> </a>
                     <div class="info-text">
+                        
                         <p>Theme is <a href="http://www.liberxue.com/2017/08/03/Jekyllthemes.html" title="访问 Jekyll liberxue主题"  data-hover="Jekyll liberxue"target="_blank">Jekyll liberxue</a> by <a href="http://www.liberxue.com/about" target="_blank">liberxue</a></p>
-                        <p>Powered by <a href="{{ site.url }}/tags/#Jekyll" title="Jekyll" data-hover="Jekyll" target="_blank" rel="nofollow">Jekyll</a></p>
-                        <p>&copy; 2017 <a href="/feed.xml"  title="访问 liberxue blog RSS" data-hover="liberxue blog RSS">liberxue blog RSS</a></p>
-                        <p>总计文章：{{paginator.total_posts}}篇</p>
-                      <iframe src="http://ghbtns.com/github-btn.html?user=liberxue&repo=liberxue.github.io&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+
+                        <p>Powered by <a href="https://jekyllrb.com/" title="Jekyll" data-hover="Jekyll" target="_blank" rel="nofollow">Jekyll</a></p>
+                        <p>感谢liberxue提供的主题代码，下面是<a class="social github" target="blank" href="http://www.liberxue.com" data-hover="主题作者的博客" title="访问主题作者的Blog">主题作者的博客</a></p>
+                        <p>&copy; 2017 主题作者Blog的RSS：<a href="liberxue.com/feed.xml"  title="访问 liberxue blog RSS" data-hover="liberxue blog RSS">liberxue blog RSS</a></p>
+                      <p>感觉这个博客不错的话可以去Fork作者的github<iframe src="http://ghbtns.com/github-btn.html?user=liberxue&repo=liberxue.github.io&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe></p>
                     </div>
                 </div>
             </div>
             <div class="meta-item meta-posts">
                 <h3 class="meta-title">置顶文章</h3>
-     <!--置顶-->
-    {% for post in site.posts limit:15 %}
-      {% if post.istop %}
-      <li><a href="{{ post.url }}" title="访问 {{ post.title }}" data-hover="{{ post.title }}">{{ post.title }}</a></li>
-      {% endif %}
-    {% endfor %}
+               <!--置顶-->
+              {% for post in site.posts limit:15 %}
+                {% if post.istop %}
+                <li><a href="{{ post.url }}" title="访问 {{ post.title }}" data-hover="{{ post.title }}">{{ post.title }}</a></li>
+                {% endif %}
+              {% endfor %}
         <!--置顶-->
             </div>
             <div class="meta-item meta-comments">
                 <h3 class="meta-title">最新文章</h3>
-  {% for post in site.posts limit:14 %}        
-      {% if post.book %}
- <li><a href="{{ post.url }}" title="访问 {{ post.title }}" data-hover="{{ post.title }}">{{ post.title }}</a></li>
+  <!-- 选择显示的文章数 -->
+  {% for post in site.posts limit:6 %}        
+      {% if post.learning%}
+      <!-- nothing -->
+      {%else%}
+      <li><a href="{{ post.url }}" title="访问 {{ post.title }}" data-hover="{{ post.title }}">{{ post.title }}</a></li>
       {% endif %}
     {% endfor %}
 </div>
