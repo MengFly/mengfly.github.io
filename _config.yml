@@ -7,7 +7,7 @@ signoff:          "WangPengFei" # Your name
 share:            true 
 
 # 分页
-paginate: 15
+paginate: 9
 paginate_path: "page:num"
 gems: [jekyll-paginate]
 links:
@@ -19,6 +19,9 @@ links:
     external:     false
   - name:         小说
     url:          /story
+    external:     false
+  - name:         学习笔记
+    url:          /learning
     external:     false
   - name:         归档
     url:          /archives
