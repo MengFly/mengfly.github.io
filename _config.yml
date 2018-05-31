@@ -1,7 +1,7 @@
 # ----------- CONFIGURABLE START -----------
 title:            "MengFly Blog Home"
 email:            "www.wangpengfei99@gmail.com"
-description:      "漫画，代码DAIYISIKI"
+description:      "感悟、代码、笔记 && 漫画、代码DAIYISIKI"
 url:              "https://mengfly.github.io" # 域名
 signoff:          "WangPengFei" # Your name
 share:            true 
