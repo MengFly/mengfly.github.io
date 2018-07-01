@@ -46,11 +46,11 @@
                 <h3 class="meta-title">最新文章</h3>
   <!-- 选择显示的文章数 -->
   {% for post in site.posts limit:6 %}        
-      {% if post.learning%}
+      <!-- {% if post.learning%} -->
       <!-- nothing -->
-      {%else%}
+      <!-- {%else%} -->
       <li><a href="{{ post.url }}" title="访问 {{ post.title }}" data-hover="{{ post.title }}">{{ post.title }}</a></li>
-      {% endif %}
+      <!-- {% endif %} -->
     {% endfor %}
 </div>
 		</div>
