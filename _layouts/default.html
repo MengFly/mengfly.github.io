@@ -17,7 +17,7 @@
       </a>
         <div class="navbar-menu">
            {% for link in site.links %}             
-            <a href="{{site.url}}{{ link.url }}"  title="访问 yayaya{{  link.name }}" data-hover="{{link.name}}">{{ link.name }}</a>
+            <a href="{{ link.url }}"  title="访问 {{  link.name }}" data-hover="{{link.name}}">{{ link.name }}</a>
                 {% endfor %}
           </div>
         <div class="navbar-search" onclick="">
