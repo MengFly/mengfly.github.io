@@ -14,7 +14,7 @@
       <a href="/" title="访问 {{site.title }}" class="navbar-logo"> <img src="{{ site.url }}/style/images/logo-liberxue.png" alt="{{ site.title }}"> </a>
         <div class="navbar-menu">
             {% for link in site.links %}             
-            <a href="{{ site.url }}{{ link.url }}">{{ link.name }}</a>
+            <a href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.name }}</a>
                 {% endfor %}
           </div>
         <div class="navbar-search" onclick="">
