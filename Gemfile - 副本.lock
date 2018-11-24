@@ -7,6 +7,7 @@ GEM
     concurrent-ruby (1.0.5)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
     eventmachine (1.2.5-x64-mingw32)
     ffi (1.9.21-x64-mingw32)
     forwardable-extended (2.6.0)
@@ -71,7 +72,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  jekyll (>= 3.7.4)
+  jekyll (~> 3.7.2)
   jekyll-feed (~> 0.6)
   jekyll-paginate
   minima (~> 2.0)
