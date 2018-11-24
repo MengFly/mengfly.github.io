@@ -15,19 +15,19 @@ links:
     url:          /
     external:     false
   - name:         书籍
-    url:          /book.html
+    url:          /classify/book.html
     external:     false
   - name:         小说
-    url:          /story.html
+    url:          /classify/story.html
     external:     false
   - name:         学习笔记
-    url:          /learning.html
+    url:          /classify/learning.html
     external:     false
   - name:         归档
-    url:          /archives.html
+    url:          /classify/archives.html
     external:     false
   - name:         标签
-    url:          /tags.html
+    url:          /classify/tags.html
     external:     false
   - name:         关于
     url:          /about
