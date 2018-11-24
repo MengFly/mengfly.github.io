@@ -15,7 +15,7 @@ links:
     url:          /
     external:     false
   - name:         书籍
-    url:          /book
+    url:          /book.html
     external:     false
   - name:         小说
     url:          /story
