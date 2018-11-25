@@ -8,7 +8,7 @@ share:            true
 
 # 分页
 paginate: 9
-paginate_path: "/page:num"
+paginate_path: "/page:num.html"
 gems: [jekyll-paginate]
 links:
   - name:         首页
