@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 
 /* ==========================================================================
    #reset
@@ -751,7 +751,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
    ========================================================================== */
 .main-content {
     position: relative;
-    max-width: 1020px;
+    max-width: 1080px;
     margin: 0 auto;
     -webkit-animation: fade-in .5s;
     animation: fade-in;

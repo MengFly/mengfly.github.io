@@ -1,5 +1,4 @@
 {% assign is_post = page.date %}
-<!DOCTYPE>
 <html lang="zh-cn" data-scribe-reduced-action-queue="true">
 <head>
     <meta content='{{ page.title }} - {{ site.title }}' name='title'/>
@@ -114,21 +113,35 @@
                 分钟</p>
         </blockquote>
         {{ content }}
-        <!-- 显示上一篇和下一篇的逻辑 -->
+
+        <div class="meta-item meta-comments">
+            <h5>相关文章推荐：</h5>
+            <ol>
+                {% for post in site.related_posts limit:5 %}
+                <li><a href="{{post.url}}" title="访问{{post.title}}"
+                       data-hover="{{post.title}}">{{post.title}}</a>
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
         <div class="meta-item meta-comments">
             {%if page.previous != nil %}
+            <!-- 显示上一篇和下一篇的逻辑 -->
             <li> 上一篇：<a href="{{page.previous.url}}" title="访问{{page.previous.title}}"
                         data-hover="{{page.previous.title}}">{{page.previous.title}}</a></li>
             {% endif %}
             {%if page.next != nil%}
+            <!-- 显示上一篇和下一篇的逻辑 -->
             <li> 下一篇：<a href="{{page.next.url}}" title="访问{{page.next.title}}" data-hover="{{page.next.title}}">{{page.next.title}}</a>
             </li>
             {%endif%}
         </div>
 
         <p class="post-info">
-            本文由 <a href="/">MengFly</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
-                                                 rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为:{{
+            本文由 <a href="/">MengFly</a> 创作，采用
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+               rel="external nofollow">知识共享署名4.0</a>
+            国际许可协议进行许可<br>本站文章除注明转载/<a href="{{site.url}}{{page.url}}">出处</a>外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为:{{
             page.date | date: "%F %H:%M:%S"}}</p>
     </div>
 </article>

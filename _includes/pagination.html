@@ -13,7 +13,7 @@
             {% if paginator.previous_page == 1 %}
             <a href="/">
                 {% else %}
-                <a href="{{site.url}}/page{{ paginator.previous_page }}.html">
+                <a href="{{paginator.previous_page_path}}">
                     {% endif %}
                     <span>&laquo;</span>
                 </a>
@@ -36,7 +36,8 @@
             {% if paginator.page == paginator.total_pages %}
             <span>&raquo;</span>
             {% else %}
-            <a href="{{site.url}}/page{{ paginator.next_page }}.html" data-hover="&raquo;">
+            <!--<a href="{{site.url}}/page{{ paginator.next_page }}.html" data-hover="&raquo;">-->
+            <a href="{{paginator.next_page_path}}" data-hover="&raquo;">
                 <span>&raquo;</span>
             </a>
             {% endif %}
