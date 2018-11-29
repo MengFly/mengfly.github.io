@@ -25,8 +25,12 @@ description: "随便写写的东西，不值得一看"
                             <div class="item-meta-ico bg-ico-note"
                                  style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
-                                <a href="category/thoughts/index.html">{{ posts.category }}</a>
-                                <a href="category/thoughts/index.html">{{ posts.date | date: "%F %H:%M:%S "}}</a></div>
+                                <a href="/classify/tags.html" title="访问 {{  posts.category }}"
+                                   data-hover="{{ posts.category }}">{{ posts.category }}</a>
+                                <a href="/classify/archives.html" title="访问 {{ posts.date | date: ' %Y'}}"
+                                   data-hover="{{ posts.date | date: '%F %H:%M:%S '}}">{{ posts.date | date: "%F
+                                    %H:%M:%S
+                                    "}}</a></div>
                         </div>
                     </div>
                 </div>
