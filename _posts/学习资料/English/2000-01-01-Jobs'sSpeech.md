@@ -1,7 +1,7 @@
 ---
 layout: material
 title: Jobs's Speech
-learning:   true
+material:   true
 category:   学习材料
 type:       材料
 date:       2000-01-01
