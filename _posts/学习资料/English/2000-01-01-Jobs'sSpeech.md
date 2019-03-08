@@ -1,5 +1,5 @@
 ---
-layout: material
+layout: blog
 title: Jobs's Speech
 material:   true
 category:   学习材料
