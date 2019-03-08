@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b539579d-8d63-4771-ad0d-84598408e2f9" name="Default Changelist" comment="修改界面">
-      <change afterPath="$PROJECT_DIR$/_drafts/2018-11-26-自私的基因.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mengfly.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mengfly.github.io.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/学习笔记/CycleGAN/2018-11-24-CycleGAN笔记一.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/学习笔记/CycleGAN/2018-11-24-CycleGAN笔记一.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classify/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/classify/book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classify/learning.html" beforeDir="false" afterPath="$PROJECT_DIR$/classify/learning.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classify/story.html" beforeDir="false" afterPath="$PROJECT_DIR$/classify/story.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="b539579d-8d63-4771-ad0d-84598408e2f9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +12,7 @@
     <session id="1684669462">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.24" value="2" />
           <entry key="project.open.time.26" value="1" />
@@ -67,7 +57,7 @@
           <entry key="CSS" value="245" />
           <entry key="HTML" value="819" />
           <entry key="Markdown" value="901" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="PLAIN_TEXT" value="28" />
           <entry key="Ruby" value="5" />
           <entry key="YAML" value="7" />
         </counts>
@@ -85,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -154,11 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_layouts/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="276">
+              <caret line="12" column="82" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -168,7 +158,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="89">
-                <caret line="307" lean-forward="true" selection-start-line="307" selection-end-line="307" />
+                <caret line="307" selection-start-line="307" selection-end-line="307" />
               </first_editor>
               <second_editor />
             </state>
@@ -366,7 +356,7 @@
       <workItem from="1543233487478" duration="2653000" />
       <workItem from="1543409143978" duration="34000" />
       <workItem from="1543409355241" duration="538000" />
-      <workItem from="1543489122658" duration="1789000" />
+      <workItem from="1543489122658" duration="2474000" />
     </task>
     <task id="LOCAL-00001" summary="修改界面">
       <created>1543129793917</created>
@@ -375,17 +365,24 @@
       <option name="project" value="LOCAL" />
       <updated>1543129793917</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改界面bug&#10;更新CycleGAN文章">
+      <created>1543490973345</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543490973345</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22036000" />
+    <option name="totallyTimeSpent" value="22721000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18498659" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18498659" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -400,10 +397,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3293011" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3293011" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3293011" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3293011" />
       <window_info anchor="right" x="0" y="0" width="337" height="678" id="Documentation" side_tool="true" weight="0.3297587" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
@@ -425,7 +422,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改界面" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改界面" />
+    <MESSAGE value="修改界面bug&#10;更新CycleGAN文章" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改界面bug&#10;更新CycleGAN文章" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -636,18 +634,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/学习笔记/CycleGAN/2018-11-24-CycleGAN笔记一.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="89">
-            <caret line="307" lean-forward="true" selection-start-line="307" selection-end-line="307" />
+            <caret line="307" selection-start-line="307" selection-end-line="307" />
           </first_editor>
           <second_editor />
         </state>
@@ -663,7 +654,14 @@
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="82" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
         </state>
       </provider>
     </entry>

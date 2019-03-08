@@ -22,6 +22,8 @@ links:
     external:     false
   - name:         学习笔记
     url:          /classify/learning.html
+  - name:         学习资料
+    url:          /classify/material.html
     external:     false
   - name:         归档
     url:          /classify/archives.html
