@@ -4,7 +4,7 @@ title: Jobs's Speech
 learning:   true
 category:   学习材料
 type:       材料
-date:       2000-00-00
+date:       2000-01-01
 background-image: "/assets/jobs.jpeg"
 tags:
 - English
