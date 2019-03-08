@@ -14,7 +14,9 @@ tags:
 
 Let's listen to the audio.
 
-<p>/assets/Audio/Jobs1.m4a</p>
+<audio controls="controls">
+  <source src="/assets/Audio/Jobs1.m4a" type="audio/mp3" />
+</audio>
 
 
 Thank you
