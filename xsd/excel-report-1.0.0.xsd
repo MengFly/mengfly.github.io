@@ -559,7 +559,16 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-
+            <xs:element minOccurs="0" name="weight" type="xs:double">
+                <xs:annotation>
+                    <xs:documentation source="description">
+                        组件占比，默认为1，
+                        在自动调整组件大小的时候使用，例如
+                        在HLayout中，如果组件的宽度设置为了 -1, 那么该属性生效
+                        在VLayout中，如果组件的高度设置为了 -1, 那么该属性生效
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:all>
 
         <xs:attribute name="id" use="required" type="xs:ID">
@@ -571,6 +580,8 @@
         </xs:attribute>
 
     </xs:complexType>
+    <xs:complexType name="PageColSplit"/>
+    <xs:complexType name="PageRowSplit"/>
     <xs:simpleType name="BorderStyle">
         <xs:annotation>
             <xs:documentation source="description">
@@ -676,6 +687,14 @@
             <xs:enumeration value="end"/>
         </xs:restriction>
     </xs:simpleType>
+    <xs:simpleType name="ImageAnchorType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MOVE_AND_RESIZE"/>
+            <xs:enumeration value="DONT_MOVE_DO_RESIZE"/>
+            <xs:enumeration value="MOVE_DONT_RESIZE"/>
+            <xs:enumeration value="DONT_MOVE_AND_RESIZE"/>
+        </xs:restriction>
+    </xs:simpleType>
     <xs:simpleType name="Orientation">
         <xs:restriction base="xs:string">
             <xs:enumeration value="horizontal"/>
@@ -719,7 +738,6 @@
             <xs:enumeration value="out"/>
         </xs:restriction>
     </xs:simpleType>
-
     <xs:simpleType name="AxisTickLabelPosition">
         <xs:restriction base="xs:string">
             <xs:enumeration value="nextTo"/>
@@ -728,7 +746,6 @@
             <xs:enumeration value="low"/>
         </xs:restriction>
     </xs:simpleType>
-
     <xs:simpleType name="AxisType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="category"/>
@@ -736,7 +753,6 @@
             <xs:enumeration value="values"/>
         </xs:restriction>
     </xs:simpleType>
-
     <xs:simpleType name="AxisLabelAlignment">
         <xs:restriction base="xs:string">
             <xs:enumeration value="center"/>
@@ -744,7 +760,37 @@
             <xs:enumeration value="right"/>
         </xs:restriction>
     </xs:simpleType>
+    <xs:simpleType name="ScaleType">
 
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="FIT_START"/>
+            <xs:enumeration value="FIT_END"/>
+            <xs:enumeration value="FIT_XY"/>
+            <xs:enumeration value="CENTER"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="UnderLineType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DASH"/>
+            <xs:enumeration value="DASH_HEAVY"/>
+            <xs:enumeration value="DASH_LONG"/>
+            <xs:enumeration value="DASH_LONG_HEAVY"/>
+            <xs:enumeration value="DOUBLE"/>
+            <xs:enumeration value="DOT_DASH"/>
+            <xs:enumeration value="DOT_DASH_HEAVY"/>
+            <xs:enumeration value="DOT_DOT_DASH"/>
+            <xs:enumeration value="DOT_DOT_DASH_HEAVY"/>
+            <xs:enumeration value="DOTTED"/>
+            <xs:enumeration value="DOTTED_HEAVY"/>
+            <xs:enumeration value="HEAVY"/>
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="SINGLE"/>
+            <xs:enumeration value="WAVY"/>
+            <xs:enumeration value="WAVY_DOUBLE"/>
+            <xs:enumeration value="WAVY_HEAVY"/>
+            <xs:enumeration value="WORDS"/>
+        </xs:restriction>
+    </xs:simpleType>
     <xs:group name="ContainerGroupContainer">
 
         <xs:choice>
@@ -760,7 +806,6 @@
         </xs:choice>
 
     </xs:group>
-
     <xs:group name="LayoutGroupContainer">
         <xs:sequence>
             <xs:choice maxOccurs="unbounded">
@@ -773,6 +818,9 @@
                 <xs:element minOccurs="0" maxOccurs="unbounded" name="Span" type="Span"/>
                 <xs:element minOccurs="0" maxOccurs="unbounded" name="Link" type="Link"/>
                 <xs:element minOccurs="0" maxOccurs="unbounded" name="Chart" type="Chart"/>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="include" type="include"/>
+                <xs:element minOccurs="0" name="PageColSplit" type="PageColSplit"/>
+                <xs:element minOccurs="0" name="PageRowSplit" type="PageRowSplit"/>
             </xs:choice>
         </xs:sequence>
     </xs:group>
@@ -787,6 +835,7 @@
         </xs:annotation>
         <xs:group ref="LayoutGroupContainer"/>
         <xs:attribute name="alignPolicy" type="AlignPolicy"/>
+        <xs:attributeGroup ref="AttrSize"/>
         <xs:attributeGroup ref="AttrContainerDefault"/>
         <xs:attributeGroup ref="AttrForeach"/>
     </xs:complexType>
@@ -798,6 +847,7 @@
         </xs:annotation>
         <xs:group ref="LayoutGroupContainer"/>
         <xs:attribute name="alignPolicy" type="AlignPolicy"/>
+        <xs:attributeGroup ref="AttrSize"/>
         <xs:attributeGroup ref="AttrContainerDefault"/>
         <xs:attributeGroup ref="AttrForeach"/>
     </xs:complexType>
@@ -878,7 +928,13 @@
                 </xs:documentation>
             </xs:annotation>
         </xs:attribute>
-
+        <xs:attribute name="headerHeight" default="true" type="xs:int">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    表头高度
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
     <xs:complexType name="TableColumn">
         <xs:attribute name="id" type="xs:string" use="required">
@@ -930,8 +986,30 @@
                 </xs:documentation>
             </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="anchorType" type="ImageAnchorType">
+            <xs:annotation>
+                <xs:documentation>
+                    定位方式
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="scaleType" type="ScaleType" default="FIT_XY">
+            <xs:annotation>
+                <xs:documentation>
+                    图片的缩放方式
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="padding" type="xs:string" default="1,1,1,1">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    图片的内边距
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
         <xs:attributeGroup ref="AttrContainerDefault"/>
         <xs:attributeGroup ref="AttrSize"/>
+
     </xs:complexType>
     <xs:complexType name="List">
         <xs:annotation>
@@ -1010,6 +1088,13 @@
         </xs:annotation>
 
         <xs:all>
+            <xs:element minOccurs="0" name="Title" type="ChartTitle">
+                <xs:annotation>
+                    <xs:documentation source="description">
+                        图表标题
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:element minOccurs="0" name="Legend" type="Legend">
                 <xs:annotation>
                     <xs:documentation source="description">
@@ -1017,6 +1102,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            <xs:element minOccurs="0" name="Marker" type="ChartMarker"/>
             <xs:element minOccurs="0" name="ChartData" type="ChartData">
                 <xs:annotation>
                     <xs:documentation source="description">
@@ -1039,15 +1125,6 @@
                 </xs:annotation>
             </xs:element>
         </xs:all>
-
-
-        <xs:attribute name="title" type="xs:string">
-            <xs:annotation>
-                <xs:documentation source="description">
-                    图表标题
-                </xs:documentation>
-            </xs:annotation>
-        </xs:attribute>
         <xs:attribute name="autoTitleDelete" type="xs:boolean">
             <xs:annotation>
                 <xs:documentation>是否自动删除标题</xs:documentation>
@@ -1058,17 +1135,23 @@
                 <xs:documentation>空值显示方式</xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="titleOverlay" type="xs:boolean" default="false">
+        <xs:attribute name="anchorType" type="ImageAnchorType">
             <xs:annotation>
-                <xs:documentation>是否标题叠加</xs:documentation>
+                <xs:documentation>图表定位类型</xs:documentation>
             </xs:annotation>
         </xs:attribute>
         <xs:attributeGroup ref="AttrSize"/>
         <xs:attributeGroup ref="AttrContainerDefault"/>
 
     </xs:complexType>
-
-
+    <xs:complexType name="include">
+        <xs:attribute name="ref" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>要引入的模板位置</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:anyAttribute processContents="lax"/>
+    </xs:complexType>
     <xs:complexType name="Legend">
         <xs:attribute name="position" type="LegendPosition">
             <xs:annotation>
@@ -1081,6 +1164,57 @@
             <xs:annotation>
                 <xs:documentation source="description">
                     是否叠加
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="ChartTitle">
+        <xs:attribute name="text" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    标题文本
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="overlay" type="xs:boolean" default="false">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否叠加
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="bold" type="xs:boolean" default="true">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否粗体
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="fontSize" type="xs:double" default="12">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    字体大小
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="underLine" type="UnderLineType" default="NONE">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否下划线
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="baseLine" type="xs:int">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    基线
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="italic" type="xs:boolean">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否斜体
                 </xs:documentation>
             </xs:annotation>
         </xs:attribute>
@@ -1133,7 +1267,7 @@
         </xs:attribute>
     </xs:attributeGroup>
     <xs:attributeGroup name="AttrChartAxis">
-        <xs:attribute name="title" type="xs:string" use="required">
+        <xs:attribute name="title" type="xs:string">
             <xs:annotation>
                 <xs:documentation source="description">
                     坐标轴名称
@@ -1211,6 +1345,22 @@
             </xs:annotation>
         </xs:attribute>
     </xs:attributeGroup>
+    <xs:attributeGroup name="AttrChartGridLine">
+        <xs:attribute name="showMajorGridLines" type="xs:boolean" default="false">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否显示主网格线
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="showMinorGridLines" type="xs:boolean" default="false">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否显示次网格线
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:attributeGroup>
     <xs:attributeGroup name="AttrAxisData">
         <xs:attribute name="title" use="required">
             <xs:annotation>
@@ -1248,7 +1398,74 @@
                 </xs:documentation>
             </xs:annotation>
         </xs:attribute>
+
+        <xs:attribute name="smooth" type="xs:boolean" default="true">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否平滑曲线
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="showLeaderLines" default="false" type="xs:boolean">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否显示指示线
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:attributeGroup>
+
+    <xs:complexType name="ChartMarker">
+        <xs:attribute name="showPercent" default="false" type="xs:boolean">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否显示百分比
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="showBubbleSize" default="false" type="xs:boolean">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否显示气泡大小
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="showLeaderLines" default="false" type="xs:boolean">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否显示指示线
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="showSerName" default="false" type="xs:boolean">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否显示系列名称
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="showCatName" default="false" type="xs:boolean">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否显示类别名称
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="showVal" default="false" type="xs:boolean">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否显示数值
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="showLegendKey" default="false" type="xs:boolean">
+            <xs:annotation>
+                <xs:documentation source="description">
+                    是否显示图例
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
 
     <xs:complexType name="ChartData">
         <xs:all>
@@ -1275,6 +1492,50 @@
             </xs:element>
         </xs:all>
     </xs:complexType>
+    <xs:complexType name="Chart3dData">
+        <xs:all>
+            <xs:element minOccurs="0" name="labelAxis" type="ChartLabelAxis">
+                <xs:annotation>
+                    <xs:documentation source="description">
+                        标签轴
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="valueAxis1" type="Chart3dValueAxis">
+                <xs:annotation>
+                    <xs:documentation source="description">
+                        数值轴1
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="valueAxis2" type="Chart3dValueAxis">
+                <xs:annotation>
+                    <xs:documentation source="description">
+                        数值轴2
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="ChartPieData">
+        <xs:all>
+            <xs:element minOccurs="0" name="labelAxis" type="ChartLabelAxis">
+                <xs:annotation>
+                    <xs:documentation source="description">
+                        标签轴
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="valueAxis" type="PieValueAxis">
+                <xs:annotation>
+                    <xs:documentation source="description">
+                        数值轴
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+
     <xs:complexType name="ChartLabelAxis">
 
         <xs:all>
@@ -1282,7 +1543,6 @@
                 <xs:complexType>
                     <xs:attributeGroup ref="AttrAxisData"/>
                 </xs:complexType>
-
             </xs:element>
         </xs:all>
 
@@ -1302,9 +1562,8 @@
         </xs:attribute>
 
         <xs:attributeGroup ref="AttrChartAxis"/>
+        <xs:attributeGroup ref="AttrChartGridLine"/>
     </xs:complexType>
-
-
     <xs:complexType name="ChartValueAxis">
 
         <xs:sequence>
@@ -1332,8 +1591,8 @@
         </xs:sequence>
         <xs:attributeGroup ref="AttrForeach"/>
         <xs:attributeGroup ref="AttrChartAxis"/>
+        <xs:attributeGroup ref="AttrChartGridLine"/>
     </xs:complexType>
-
     <xs:complexType name="PieValueAxis">
 
         <xs:sequence>
@@ -1382,49 +1641,7 @@
 
         <xs:attributeGroup ref="AttrForeach"/>
         <xs:attributeGroup ref="AttrChartAxis"/>
-    </xs:complexType>
-    <xs:complexType name="Chart3dData">
-        <xs:all>
-            <xs:element minOccurs="0" name="labelAxis" type="ChartLabelAxis">
-                <xs:annotation>
-                    <xs:documentation source="description">
-                        标签轴
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element minOccurs="0" name="valueAxis1" type="Chart3dValueAxis">
-                <xs:annotation>
-                    <xs:documentation source="description">
-                        数值轴1
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element minOccurs="0" name="valueAxis2" type="Chart3dValueAxis">
-                <xs:annotation>
-                    <xs:documentation source="description">
-                        数值轴2
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-        </xs:all>
-    </xs:complexType>
-    <xs:complexType name="ChartPieData">
-        <xs:all>
-            <xs:element minOccurs="0" name="labelAxis" type="ChartLabelAxis">
-                <xs:annotation>
-                    <xs:documentation source="description">
-                        标签轴
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="valueAxis" type="PieValueAxis">
-                <xs:annotation>
-                    <xs:documentation source="description">
-                        数值轴
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-        </xs:all>
+        <xs:attributeGroup ref="AttrChartGridLine"/>
     </xs:complexType>
 
 </xs:schema>
